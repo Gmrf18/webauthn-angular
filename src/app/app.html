@@ -1,12 +1,13 @@
-<header>
-  <nav>
-    <ul>
-      <button routerLink="/login">Login</button>
-      <button routerLink="/signin">Register</button>
+<header class="bg-gray-800 text-white p-4">
+  <nav class="container mx-auto">
+    <ul class="flex space-x-4">
+      <li><a routerLink="/login" class="hover:text-gray-300">Login</a></li>
+      <li><a routerLink="/signin" class="hover:text-gray-300">Register</a></li>
+      <li><a routerLink="/admin" class="hover:text-gray-300">Admin</a></li>
     </ul>
   </nav>
 </header>
 
-<main>
+<main class="container mx-auto p-4">
   <router-outlet />
 </main>

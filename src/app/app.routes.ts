@@ -10,6 +10,10 @@ export const routes: Routes = [
     loadComponent: () => import('./login/login'),
   },
   {
+    path: 'admin',
+    loadComponent: () => import('./admin/admin'),
+  },
+  {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full',
