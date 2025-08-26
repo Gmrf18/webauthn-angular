@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Login</h2>
+  @if (isSupported()) {
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-field">
+        <label for="username">Username</label>
+        <input id="username" type="text" formControlName="username" />
+      </div>
+      <button type="submit" [disabled]="form.invalid">Login</button>
+      @if (error()) {
+        <p class="error">{{ error() }}</p>
+      }
+    </form>
+  } @else {
+    <p class="error">WebAuthn is not supported in this browser.</p>
+  }
+</div>
